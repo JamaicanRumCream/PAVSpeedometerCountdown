@@ -67,7 +67,15 @@ float PAVDegreesToRadians(float degrees) { return degrees * (M_PI / 180); };
     }];
 }
 
+/** Stops the animation immediately and leaves the pointer in the position it was at that very moment */
+- (void)stopAnimation {
+    self.pointerView.layer.transform = self.pointerView.layer.presentationLayer.transform;
+    [self.pointerView.layer removeAllAnimations];
+}
+
 - (void)resetPointerPosition {
+    [self.pointerView.layer removeAllAnimations];
+    
     CGAffineTransform pointerTransform = CGAffineTransformRotate(CGAffineTransformIdentity, PAVDegreesToRadians(135.0));
     [self.pointerView setTransform:pointerTransform];
 }

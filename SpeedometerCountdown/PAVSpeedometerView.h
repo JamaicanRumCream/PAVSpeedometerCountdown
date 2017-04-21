@@ -22,6 +22,7 @@
 @property (nonatomic, assign) NSUInteger timeDuration;
 
 - (void)startAnimation;
+- (void)stopAnimation;
 - (void)resetPointerPosition;
 
 @end
