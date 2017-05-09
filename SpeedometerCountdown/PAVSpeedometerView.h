@@ -21,6 +21,8 @@
 /** Time of the countdown animation */
 @property (nonatomic, assign) NSUInteger timeDuration;
 
+- (void)setupSpeedometerWithNumberImageName:(NSString *)numberImageName pointerImageName:(NSString *)pointerImageName pointerInBack:(BOOL)inBack animationDuration:(CGFloat)duration;
+
 - (void)startAnimation;
 - (void)stopAnimation;
 - (void)resetPointerPosition;

@@ -58,6 +58,13 @@ float PAVDegreesToRadians(float degrees) { return degrees * (M_PI / 180); };
     [self setClipsToBounds:YES];
 }
 
+- (void)setupSpeedometerWithNumberImageName:(NSString *)numberImageName pointerImageName:(NSString *)pointerImageName pointerInBack:(BOOL)inBack animationDuration:(CGFloat)duration {
+    [self setBackgroundImageFileName:numberImageName];
+    [self setPointerFileName:pointerImageName];
+    [self setPointerIsInBack:inBack];
+    [self setTimeDuration:duration];
+}
+
 - (void)startAnimation {
     [UIView animateWithDuration:self.timeDuration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         CGAffineTransform pointerTransform = CGAffineTransformRotate(CGAffineTransformIdentity, PAVDegreesToRadians(45.0));
