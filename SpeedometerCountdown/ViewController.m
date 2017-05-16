@@ -11,7 +11,7 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) IBOutlet PAVSpeedometerView *speedoView;
+@property (nonatomic, strong) IBOutlet PAVSpeedometerView *speedoView;
 
 
 @end
