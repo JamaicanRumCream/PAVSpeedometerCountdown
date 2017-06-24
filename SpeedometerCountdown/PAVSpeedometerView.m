@@ -59,6 +59,7 @@ float PAVDegreesToRadians(float degrees) { return degrees * (M_PI / 180); };
 }
 
 - (void)setupSpeedometerWithNumberImageName:(NSString *)numberImageName pointerImageName:(NSString *)pointerImageName pointerInBack:(BOOL)inBack animationDuration:(CGFloat)duration {
+    [self setup];
     [self setBackgroundImageFileName:numberImageName];
     [self setPointerFileName:pointerImageName];
     [self setPointerIsInBack:inBack];
